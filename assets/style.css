@@ -228,3 +228,12 @@ footer .wrap { display: flex; justify-content: space-between; align-items: cente
   .tone + .tone { padding-left: 12px; }
   .tone:nth-child(3) { padding-left: 0; }
 }
+
+/* Breathing room between the hero and the figures strip. */
+.hero + .wrap { margin-top: clamp(40px, 6vw, 88px); }
+/* Let the aurora fade out before the hero ends instead of being clipped by it. */
+.hero::before {
+  inset: auto -10% 0 -10%;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 35%, #000 55%, transparent);
+          mask-image: linear-gradient(to bottom, transparent, #000 35%, #000 55%, transparent);
+}
