@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en" data-tone="clay" data-mode="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stonebase — training and climbing, in your colours</title>
+  <meta name="description" content="Stonebase is a quiet training log, project book and coaching notebook for climbers, on iPhone and iPad.">
+  <meta property="og:title" content="Stonebase">
+  <meta property="og:description" content="A quiet training log, project book and coaching notebook for climbers.">
+  <meta property="og:image" content="shots/clay-light/today.jpg">
+  <meta name="theme-color" content="#ECEADF">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&family=Space+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>
+    // Pick the theme before first paint so the page never flashes the wrong palette.
+    (function () {
+      var d = document.documentElement, s = {};
+      try { s = JSON.parse(localStorage.getItem("sb-theme") || "{}"); } catch (e) {}
+      var q = new URLSearchParams(location.search);
+      var tones = ["clay", "moss", "mist", "dusk"], modes = ["light", "dark"];
+      var tone = q.get("tone"), mode = q.get("mode");
+      d.dataset.tone = tones.indexOf(tone) > -1 ? tone : (s.tone || "clay");
+      d.dataset.mode = modes.indexOf(mode) > -1 ? mode : (s.mode || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+    })();
+  </script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Stonebase home">
+      <svg viewBox="0 0 40 37" aria-hidden="true"><circle cx="20" cy="10" r="10"/><circle cx="10" cy="27.32" r="10"/><circle cx="30" cy="27.32" r="10"/></svg>
+      <span>Stonebase</span>
+    </a>
+    <nav class="label" aria-label="Sections">
+      <a href="#today">Today</a>
+      <a href="#train">Train</a>
+      <a href="#climb">Climb</a>
+      <a href="#coach">Coach</a>
+      <a href="#themes">Themes</a>
+    </nav>
+    <div class="switcher">
+      <div class="tabs tone-tabs" role="group" aria-label="Theme">
+        <button data-set-tone="clay">Clay</button>
+        <button data-set-tone="moss">Moss</button>
+        <button data-set-tone="mist">Mist</button>
+        <button data-set-tone="dusk">Dusk</button>
+      </div>
+      <div class="tabs" role="group" aria-label="Appearance">
+        <button data-set-mode="light">Light</button>
+        <button data-set-mode="dark">Dark</button>
+      </div>
+    </div>
+  </div>
+  <hr class="rule">
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="meta label"><span><span class="dot"></span>&nbsp; For climbers &amp; coaches</span><span>iPhone · iPad</span></div>
+        <h1 class="display d-xl">You own your training.</h1>
+        <p class="lede">A training log, a project book and a coach's notebook for climbers. Quiet by design, private by default, and set in colours you choose.</p>
+        <div class="actions">
+          <a class="bracket" href="#today">Take the tour</a>
+          <a class="link" href="#themes">Four themes</a>
+        </div>
+      </div>
+      <div class="phone"><img data-shot="today" src="shots/clay-light/today.jpg" alt="The Today screen: the day's readiness, finger load and what is next" fetchpriority="high"></div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <hr class="rule strong">
+    <div class="stats">
+      <div class="stat"><div class="label">Disciplines</div><div class="v">2</div><div class="s">training &amp; climbing, one log</div></div>
+      <div class="stat"><div class="label">Themes</div><div class="v">4 × 2</div><div class="s">tones, each light and dark</div></div>
+      <div class="stat"><div class="label">Account</div><div class="v">Optional</div><div class="s">your data starts on your phone</div></div>
+      <div class="stat"><div class="label">Insights</div><div class="v">On-device</div><div class="s">computed where the data lives</div></div>
+    </div>
+    <hr class="rule">
+  </div>
+
+  <!-- 01 Today -->
+  <section class="feature" id="today">
+    <div class="wrap">
+      <div class="head label"><span>01 — Today</span><span>The first screen</span></div>
+      <hr class="rule strong">
+      <div class="grid">
+        <div class="copy">
+          <h2 class="display d-l">One calm screen for the day.</h2>
+          <p class="body">Today says where you stand and what comes next, then gets out of the way. Your career sits at the top in your theme; everything under it is a page of facts you can rearrange.</p>
+          <ul class="rows">
+            <li><span class="t">Readiness &amp; finger load</span><span class="label">Signals</span><span class="d">How you feel, and how hard your fingers have worked this week.</span></li>
+            <li><span class="t">A dashboard you arrange</span><span class="label">Widgets</span><span class="d">Add, remove and size the cards that matter to you.</span></li>
+            <li><span class="t">Your career, at a glance</span><span class="label">Hero</span><span class="d">Years of sessions read as one shape, drawn in a single ink.</span></li>
+          </ul>
+        </div>
+        <div class="shots">
+          <div class="phone sm"><img data-shot="today_mid" src="shots/clay-light/today_mid.jpg" alt="Today's dashboard widgets" loading="lazy"></div>
+          <div class="phone sm"><img data-shot="today_end" src="shots/clay-light/today_end.jpg" alt="Projects and a check-in on Today" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 Train -->
+  <section class="feature flip" id="train">
+    <div class="wrap">
+      <div class="head label"><span>02 — Train</span><span>Plans &amp; sessions</span></div>
+      <hr class="rule strong">
+      <div class="grid">
+        <div class="copy">
+          <h2 class="display d-l">The plan is the builder.</h2>
+          <p class="body">There is no edit mode. Open a plan and it is already editable: tap a value to change it, long-press a block for everything else. Then start it, and a guided runner keeps time for you.</p>
+          <ul class="rows">
+            <li><span class="t">Blocks, circuits &amp; hang protocols</span><span class="label">Authoring</span><span class="d">Supersets and EMOMs are just circuits with a different rest.</span></li>
+            <li><span class="t">A runner you can read from the wall</span><span class="label">Live</span><span class="d">Timers, audio cues and haptics, on the Lock Screen too.</span></li>
+            <li><span class="t">A log that remembers</span><span class="label">History</span><span class="d">Every session lands on its own page when you finish.</span></li>
+          </ul>
+        </div>
+        <div class="shots">
+          <div class="phone sm"><img data-shot="plan" src="shots/clay-light/plan.jpg" alt="A training plan, editable in place" loading="lazy"></div>
+          <div class="phone sm"><img data-shot="runner_work" src="shots/clay-light/runner_work.jpg" alt="The live session runner mid-set" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 Fingers -->
+  <section class="feature" id="fingers">
+    <div class="wrap">
+      <div class="head label"><span>03 — Fingers</span><span>Force &amp; strength</span></div>
+      <hr class="rule strong">
+      <div class="grid">
+        <div class="copy">
+          <h2 class="display d-l">Measure what your fingers can hold.</h2>
+          <p class="body">Pair a force gauge and watch the pull live while you hang. Test once per grip and a finger-strength profile starts to fill in; no gauge, and a weighted-hang test does the job.</p>
+          <ul class="rows">
+            <li><span class="t">Quick hangs</span><span class="label">Protocols</span><span class="d">Max hangs, repeaters, density, min-edge, one-arm and block pulls.</span></li>
+            <li><span class="t">Finger-strength test</span><span class="label">With a gauge</span><span class="d">A max pull per grip, recorded as force.</span></li>
+            <li><span class="t">Strength test</span><span class="label">No gauge</span><span class="d">Bodyweight plus added load, with the edge and grip you used.</span></li>
+          </ul>
+        </div>
+        <div class="shots">
+          <div class="phone sm"><img data-shot="quick_hang" src="shots/clay-light/quick_hang.jpg" alt="Quick hang protocols" loading="lazy"></div>
+          <div class="phone sm"><img data-shot="runner_ready" src="shots/clay-light/runner_ready.jpg" alt="The runner counting in a hang" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 Climb -->
+  <section class="feature flip" id="climb">
+    <div class="wrap">
+      <div class="head label"><span>04 — Climb</span><span>Sessions, projects, trips</span></div>
+      <hr class="rule strong">
+      <div class="grid">
+        <div class="copy">
+          <h2 class="display d-l">Every climb, every project.</h2>
+          <p class="body">Log a gym or crag session as you go, or one climb in three taps. Projects get their own page: the high point, the crux, how often you've been back, and the beta you worked out.</p>
+          <ul class="rows">
+            <li><span class="t">Projects, under siege</span><span class="label">Project</span><span class="d">Zones, falls and attempts become a high point and a crux.</span></li>
+            <li><span class="t">Conditions before you go</span><span class="label">Outdoors</span><span class="d">Sun on the wall, friction and whether the rock has dried, by day.</span></li>
+            <li><span class="t">Trips</span><span class="label">Travel</span><span class="d">Plan the training before, and keep the climbing in one place.</span></li>
+          </ul>
+        </div>
+        <div class="shots">
+          <div class="phone sm"><img data-shot="project" src="shots/clay-light/project.jpg" alt="A project: high point, crux and cadence" loading="lazy"></div>
+          <div class="phone sm"><img data-shot="climb" src="shots/clay-light/climb.jpg" alt="The Climb hub: the current project and this week" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 Recovery -->
+  <section class="feature" id="recovery">
+    <div class="wrap">
+      <div class="head label"><span>05 — Recovery</span><span>Body &amp; check-ins</span></div>
+      <hr class="rule strong">
+      <div class="grid">
+        <div class="copy">
+          <h2 class="display d-l">Listen before it hurts.</h2>
+          <p class="body">A daily check-in takes seconds: how you feel, and where it aches if it does. An ongoing issue keeps its updates together, so you can see a finger getting better instead of guessing.</p>
+          <ul class="rows">
+            <li><span class="t">Daily check-ins</span><span class="label">Wellbeing</span><span class="d">Pain, sleep and energy, or simply a pain-free day.</span></li>
+            <li><span class="t">Ongoing issues</span><span class="label">Tracking</span><span class="d">One page per injury, with every update in order.</span></li>
+          </ul>
+        </div>
+        <div class="shots">
+          <div class="phone sm"><img data-shot="recovery" src="shots/clay-light/recovery.jpg" alt="Recovery" loading="lazy"></div>
+          <div class="phone sm"><img data-shot="progress" src="shots/clay-light/progress.jpg" alt="Goals and progress charts" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 Coach -->
+  <section class="feature flip" id="coach">
+    <div class="wrap">
+      <div class="head label"><span>06 — Coach</span><span>Athletes &amp; plans</span></div>
+      <hr class="rule strong">
+      <div class="grid">
+        <div class="copy">
+          <h2 class="display d-l">Coach from the same app.</h2>
+          <p class="body">Turn on coach mode and an Athletes tab appears. Assign a plan and the athlete gets their own copy, scheduled; their sessions come back to you with room for feedback.</p>
+          <ul class="rows">
+            <li><span class="t">A roster</span><span class="label">Athletes</span><span class="d">Everyone you coach, and how their week is going.</span></li>
+            <li><span class="t">Assign &amp; schedule</span><span class="label">Plans</span><span class="d">Templates from your library, sent as editable copies.</span></li>
+            <li><span class="t">Feedback</span><span class="label">Sessions</span><span class="d">Notes on training and climbing sessions, when they've done them.</span></li>
+          </ul>
+        </div>
+        <div class="shots">
+          <div class="phone sm"><img data-shot="athletes" src="shots/clay-light/athletes.jpg" alt="The Athletes tab" loading="lazy"></div>
+          <div class="phone sm"><img data-shot="library" src="shots/clay-light/library.jpg" alt="The exercise library" loading="lazy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 Themes -->
+  <section class="feature" id="themes">
+    <div class="wrap">
+      <div class="head label"><span>07 — Themes</span><span>Choose yours</span></div>
+      <hr class="rule strong">
+      <div class="grid" style="align-items:end">
+        <h2 class="display d-l">Four tones. Each light and dark.</h2>
+        <p class="body">The theme is the whole palette: its ink, its paper and one accent, used for one thing on each screen. Pick one here and this page changes with it.</p>
+      </div>
+      <div class="tones" role="group" aria-label="Choose a theme">
+        <button class="tone" data-set-tone="clay"><span class="label">Tone 01</span><span class="chips"><i style="background:#5A1F1F"></i><i style="background:#ECEADF"></i><i style="background:#D9765A"></i></span><div class="n">Clay</div><div class="p">Maroon on cream</div></button>
+        <button class="tone" data-set-tone="moss"><span class="label">Tone 02</span><span class="chips"><i style="background:#1F3324"></i><i style="background:#E5E7DA"></i><i style="background:#6E8F4E"></i></span><div class="n">Moss</div><div class="p">Deep green on sage</div></button>
+        <button class="tone" data-set-tone="mist"><span class="label">Tone 03</span><span class="chips"><i style="background:#262E36"></i><i style="background:#E3E4E2"></i><i style="background:#B07F6E"></i></span><div class="n">Mist</div><div class="p">Slate on stone</div></button>
+        <button class="tone" data-set-tone="dusk"><span class="label">Tone 04</span><span class="chips"><i style="background:#3A2E44"></i><i style="background:#E7E3E6"></i><i style="background:#C2788A"></i></span><div class="n">Dusk</div><div class="p">Plum on rose</div></button>
+      </div>
+      <div class="gallery">
+        <div class="phone"><img data-shot="train" src="shots/clay-light/train.jpg" alt="The Train hub" loading="lazy"></div>
+        <div class="phone"><img data-shot="runner_rest" src="shots/clay-light/runner_rest.jpg" alt="Resting between sets" loading="lazy"></div>
+        <div class="phone"><img data-shot="sessions" src="shots/clay-light/sessions.jpg" alt="Climbing sessions" loading="lazy"></div>
+        <div class="phone"><img data-shot="history" src="shots/clay-light/history.jpg" alt="Training history" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 Principles -->
+  <section class="feature" id="principles" style="padding-top:0">
+    <div class="wrap">
+      <div class="head label"><span>08 — Principles</span><span>How it is made</span></div>
+      <div class="principles">
+        <div class="principle"><span class="label">Local-first</span><h3>Your phone holds the truth.</h3><p>Everything works offline, without an account. Sign in when you want a backup or a coach, not before.</p></div>
+        <div class="principle"><span class="label">Quiet</span><h3>Ink on paper.</h3><p>Rules instead of cards, one accent per screen, and nothing that moves unless it means something.</p></div>
+        <div class="principle"><span class="label">Native</span><h3>Built for iPhone and iPad.</h3><p>SwiftUI throughout, with Live Activities on the Lock Screen and Shortcuts for the things you repeat.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="wrap">
+      <hr class="rule strong">
+      <div class="head label" style="display:flex;justify-content:space-between;padding-top:14px"><span>Stonebase</span><span>For climbers &amp; coaches</span></div>
+      <h2 class="display d-xl" style="margin-top:56px">Start where you are.</h2>
+      <div class="actions">
+        <a class="bracket" href="#top">Back to the top</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap"><hr class="rule"></div>
+  <div class="wrap label">
+    <span>© 2026 Stonebase</span>
+    <span>Space Mono · Instrument Sans</span>
+  </div>
+</footer>
+
+<script src="assets/theme.js"></script>
+</body>
+</html>
